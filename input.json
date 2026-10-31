@@ -1,1 +1,84 @@
-{"classification":"synthetic","tasks":[{"source_id":"fictional-1","prompt":"Build a sample landing page","status":"complete","approval":"example only","elapsed_minutes":12},{"source_id":"fictional-2","prompt":"Review a fictional issue","status":"planned","approval":"unverified","elapsed_minutes":null}]}
+{
+  "classification": "synthetic",
+  "tasks": [
+    {
+      "source_id": "fictional-1",
+      "prompt": "Build a sample landing page",
+      "status": "complete",
+      "progress_percent": 100,
+      "approval": "example approval",
+      "elapsed_minutes": 42,
+      "session_coverage": "complete",
+      "observed_at": "2026-10-31T20:00:00Z",
+      "source_url": "https://example.com/fictional-1",
+      "sessions": [
+        {
+          "computer": "demo-mac",
+          "files_changed": 8,
+          "additions": 220,
+          "deletions": 14,
+          "tokens": 12540,
+          "messages": 17
+        },
+        {
+          "computer": "demo-linux",
+          "files_changed": 3,
+          "additions": 44,
+          "deletions": 8,
+          "tokens": 4100,
+          "messages": 6
+        }
+      ],
+      "reactions": [
+        {
+          "channel_id": "demo",
+          "message_ts": "fictional-1.001",
+          "user_id": "sample-owner",
+          "user_label": "Sample owner",
+          "emoji": "\ud83d\udc4d"
+        },
+        {
+          "channel_id": "demo",
+          "message_ts": "fictional-1.002",
+          "user_id": "sample-reviewer",
+          "user_label": "Sample reviewer",
+          "emoji": "\ud83d\udca1"
+        }
+      ]
+    },
+    {
+      "source_id": "fictional-2",
+      "prompt": "Review a fictional issue",
+      "status": "in progress",
+      "progress_percent": 60,
+      "approval": "unverified",
+      "elapsed_minutes": null,
+      "session_coverage": "partial",
+      "observed_at": "2026-10-31T20:00:00Z",
+      "sessions": [
+        {
+          "computer": "demo-mac",
+          "files_changed": null,
+          "additions": null,
+          "deletions": null,
+          "tokens": null,
+          "messages": 4
+        }
+      ],
+      "reactions": []
+    },
+    {
+      "source_id": "fictional-3",
+      "prompt": "Publish an example report",
+      "status": "planned",
+      "progress_percent": 0,
+      "approval": "unverified",
+      "elapsed_minutes": null,
+      "session_coverage": "unknown",
+      "observed_at": "2026-10-31T20:00:00Z",
+      "sessions": [],
+      "reactions": []
+    }
+  ],
+  "owner_user_id": "sample-owner"
+}
