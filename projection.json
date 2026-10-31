@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "classification": "public_aggregate",
+  "source": "verified private aggregate snapshot",
+  "cutoff_utc": "2026-10-31T22:41:32Z",
+  "refresh_mode": "manual",
+  "stages": [
+    {"key": "export", "state": "complete", "channels": 34, "records": 1072, "positive_labels": 7, "negative_labels": 3},
+    {"key": "dataset", "state": "verified", "version": 2, "notebook_tests": 19},
+    {"key": "consumer", "state": "validated", "tests": 157},
+    {"key": "optimizer", "state": "blocked", "train": 0, "validation": 0, "test": 0, "ready_for_optimizer": false, "reason": "missing source context"}
+  ],
+  "real_model_calls": 0,
+  "training_runs": 0,
+  "deployments": 0
+}

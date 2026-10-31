@@ -1,4 +1,4 @@
-name: Publish synthetic tracker
+name: Publish sanitized pipeline status
 on:
   workflow_dispatch:
   push:
@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s tests
-      - run: mkdir -p site && python generate.py input.json site/index.html --audience public
+      - run: mkdir -p site && python generate_projection.py projection.json site/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
