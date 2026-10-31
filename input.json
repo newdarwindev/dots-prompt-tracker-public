@@ -32,7 +32,7 @@
       "reactions": [
         {
           "channel_id": "demo",
-          "message_ts": "fictional-1.001",
+          "message_ts": "fictional-1",
           "user_id": "sample-owner",
           "user_label": "Sample owner",
           "emoji": "\ud83d\udc4d"
@@ -44,7 +44,38 @@
           "user_label": "Sample reviewer",
           "emoji": "\ud83d\udca1"
         }
-      ]
+      ],
+      "file_change": {
+        "files": 9,
+        "additions": 264,
+        "deletions": 22,
+        "baseline": "demo-base",
+        "scope": "demo/repo",
+        "source": "fictional git export",
+        "observed_at": "2026-10-31T20:00:00Z"
+      },
+      "evidence": {
+        "sessions": {
+          "observed_at": "2026-10-31T20:00:00Z",
+          "stale": false,
+          "source": [
+            "fictional session export"
+          ],
+          "scope": [
+            "demo provider"
+          ]
+        },
+        "reactions": {
+          "observed_at": "2026-10-31T20:00:00Z",
+          "stale": false,
+          "source": [
+            "fictional thread export"
+          ],
+          "scope": [
+            "demo channel"
+          ]
+        }
+      }
     },
     {
       "source_id": "fictional-2",
@@ -65,7 +96,8 @@
           "messages": 4
         }
       ],
-      "reactions": []
+      "reactions": [],
+      "file_change": null
     },
     {
       "source_id": "fictional-3",
@@ -77,7 +109,8 @@
       "session_coverage": "unknown",
       "observed_at": "2026-10-31T20:00:00Z",
       "sessions": [],
-      "reactions": []
+      "reactions": [],
+      "file_change": null
     }
   ],
   "owner_user_id": "sample-owner"

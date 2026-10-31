@@ -8,12 +8,12 @@ class SiteTest(unittest.TestCase):
         with self.assertRaises(ValueError):mod.build({'classification':'private','tasks':[]},'public')
     def test_reaction_dedupe_owner_only_and_unknown_metrics(self):
         bot={'channel_id':'c','message_ts':'1','user_id':'bot','emoji':'👍'}
-        owner={'channel_id':'c','message_ts':'2','user_id':'owner','emoji':'👍'}
+        owner={'channel_id':'c','message_ts':'x','user_id':'owner','emoji':'👍'}
         data={'classification':'synthetic','owner_user_id':'owner','tasks':[{'source_id':'x','prompt':'Sample','status':'done','sessions':[{'tokens':None,'messages':3}],'reactions':[bot,bot,owner]},{'source_id':'x','prompt':'Duplicate'}]}
         out=mod.build(data,'public')
         self.assertEqual(out.count('Sample'),1)
         self.assertNotIn('Duplicate',out)
         self.assertIn('Distinct reactions</span>',out)
-        self.assertIn('approved · owner 👍 · 2',out)
+        self.assertIn('approved · owner 👍 · x',out)
         self.assertIn('unknown</strong><small>Tokens',out)
 if __name__=='__main__':unittest.main()
